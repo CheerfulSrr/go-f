@@ -1,0 +1,22 @@
+.header {
+  height: 40px;
+  border-bottom: 3px solid #c9d1db;
+}
+
+.nav {
+  float: left;
+  margin: 0 15px;
+  line-height: 40px;
+}
+
+.item{
+  float: left;
+}
+.item ul {
+  float: left;
+}
+.item ul li {
+  float: left;
+  line-height: 40px;
+  margin-left: 5px;
+}

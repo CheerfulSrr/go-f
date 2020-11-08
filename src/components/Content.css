@@ -1,0 +1,12 @@
+.content {
+  float: left;
+  height: 1000px;
+  width: calc(100% - 200px);
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.input-name {
+  display: inline-block;
+  width: 100px;
+}

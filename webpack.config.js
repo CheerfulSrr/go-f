@@ -16,8 +16,7 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'js/[name].bundle.js',
-    path: path.resolve(__dirname, 'dist'),
-    publicPath: 'dist'
+    path: path.resolve(__dirname, 'dist')
   },
   optimization: {
     moduleIds: 'hashed',
@@ -34,8 +33,6 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
-    contentBase: 'dist',
-    open: true,
     hot: true,
     port: 5000,
     // proxy: [
