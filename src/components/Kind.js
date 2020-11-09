@@ -27,4 +27,12 @@ const Kind = ({ dispatch }) => {
   )
 }
 
-export default connect()(Kind);
+const mapStateToProps = (state, props) => {
+  console.log('state')
+  console.log(state)
+  console.log('props')
+  console.log(props)
+  return { ...state,...props }
+}
+
+export default connect(mapStateToProps)(Kind);
