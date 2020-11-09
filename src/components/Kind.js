@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from "react-redux";
-import { fetchKind } from '@/actions'
+import { addKind } from '@/actions'
 
 const Kind = ({ dispatch }) => {
   const [ formState, setFormState ] = useState({})
@@ -10,7 +10,7 @@ const Kind = ({ dispatch }) => {
   }
   const submitValue = (e) => {
     e.preventDefault()
-    dispatch(fetchKind(formState))
+    dispatch(addKind(formState))
   }
   return (
     <div>

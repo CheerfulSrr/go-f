@@ -1,32 +1,23 @@
 import { axios } from '@/util';
 
-const ADD_KIND = 'ADD_KIND'
-const REQUEST_POSTS = 'REQUEST_POSTS'
-const RECEIVE_POSTS = 'RECEIVE_POSTS'
+const ADD_KIND_REQUEST = 'ADD_KIND_REQUEST'
+const ADD_KIND_SUCCESS = 'ADD_KIND_SUCCESS'
 
-export const addKind = (state) => ({
-  type: ADD_KIND,
+export const addKindRequest = state => ({
+  type: ADD_KIND_REQUEST,
   isFetch: true,
-  text: state
+  text: state,
 })
 
-export const receivePosts = (state, data) => ({
-  type: RECEIVE_POSTS,
+export const addKindSuccess = (state, data) => ({
+  type: ADD_KIND_SUCCESS,
   text: state,
   item: data
 })
 
-export const requestPosts = state => ({
-  type: REQUEST_POSTS,
-  text: state,
-})
-
-export const fetchKind = state => dispatch => {
-  dispatch(addKind(state))
-  dispatch(requestPosts(state))
-  return axios({
-    url: "/kind/create",
-    params: state})
-    .then(result => (dispatch(receivePosts(state, result.data))))
+export const addKind = state => dispatch => {
+  dispatch(addKindRequest(state))
+  return axios
+    .get("/kind/create", { params: state })
+    .then(result => dispatch(addKindSuccess(state, result.data)))
 }
-
