@@ -1,9 +1,9 @@
 import React from 'react';
-import './Header.css'
 import { HashRouter as Router, Link } from "react-router-dom";
 
 const Header = () => {
-  return (<Router>
+  return (
+    <Router>
       <div className="header">
         <div className="nav"><Link to="/">GO</Link></div>
         <div className="item">

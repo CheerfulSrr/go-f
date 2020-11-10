@@ -1,23 +1,14 @@
-import React, { useEffect } from 'react';
-import { connect } from "react-redux";
-import { getKind } from "@/actions";
+import React from 'react';
 
-const Schedule = (d) => {
-  console.log('dddddddddd')
-  console.log(d)
-  const dispatch=d.dispatch
-  useEffect(() => {
-    dispatch(getKind())
-  }, [])
-  // todo 拆分容器组件和ui组件
+const Schedule = (props) => {
   return (
     <div>
       <form>
         <input type="text" list="kindList"/>
         <datalist id="kindList">
-          {/*{*/}
-          {/*  item.kind.map(d=>(<option>{d.kindName}</option>))*/}
-          {/*}*/}
+          {
+            props.state.kindList.map(d => <option id={d.id}>{d.aliasName}</option>)
+          }
         </datalist>
         <input type="text"/>
       </form>
@@ -25,13 +16,4 @@ const Schedule = (d) => {
   )
 }
 
-const mapStateToProps = (state, props) => {
-  console.log('dddddddddddddddddddddd')
-  const item = state.item
-  return {
-    ...props,
-    item
-  }
-}
-
-export default connect(mapStateToProps)(Schedule);
+export default Schedule;

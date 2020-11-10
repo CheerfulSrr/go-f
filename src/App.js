@@ -3,7 +3,7 @@ import Content from "@/components/Content";
 import Header from "@/components/Header";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import Kind from "@/components/Kind";
-import Schedule from "@/components/Schedule";
+import ScheduleForm from "@/container/ScheduleForm";
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
             <Switch>
               <Route exact path="/" component={() => (<div>GO</div>)}/>
               <Route path="/new/kind" component={(props) => <Kind {...props}/>}/>
-              <Route path="/new/schedule" component={(props) => <Schedule {...props}/>}/>
+              <Route path="/new/schedule" component={(props) => <ScheduleForm {...props}/>}/>
             </Switch>
           </div>
         </Router>

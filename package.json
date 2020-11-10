@@ -23,9 +23,6 @@
     "less": "^3.12.2",
     "less-loader": "^7.0.2",
     "mini-css-extract-plugin": "^1.0.0",
-    "redux-devtools": "^3.7.0",
-    "redux-devtools-extension": "^2.13.8",
-    "redux-logger": "^3.0.6",
     "style-loader": "^2.0.0",
     "webpack": "4.44.2",
     "webpack-cli": "3.3.12",
@@ -38,11 +35,8 @@
     "query-string": "^6.13.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-redux": "^7.2.2",
     "react-router": "4.3.0",
     "react-router-dom": "4.3.0",
-    "redux": "^4.0.5",
-    "redux-thunk": "^2.3.0",
     "yargs": "^16.1.0"
   }
 }

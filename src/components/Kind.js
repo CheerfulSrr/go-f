@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import { connect } from "react-redux";
-import { addKind } from '@/actions'
 
-const Kind = ({ dispatch }) => {
+const Kind = () => {
   const [ formState, setFormState ] = useState({})
   const setFormStateValue = (e) => {
     e.preventDefault()
@@ -10,7 +8,6 @@ const Kind = ({ dispatch }) => {
   }
   const submitValue = (e) => {
     e.preventDefault()
-    dispatch(addKind(formState))
   }
   return (
     <div>
@@ -27,4 +24,4 @@ const Kind = ({ dispatch }) => {
   )
 }
 
-export default connect()(Kind);
+export default Kind;

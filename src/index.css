@@ -9,4 +9,39 @@ a {
   text-decoration: none;
 }
 
+.content {
+  float: left;
+  height: 1000px;
+  width: calc(100% - 200px);
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.input-name {
+  display: inline-block;
+  width: 100px;
+}
+
+.header {
+  height: 40px;
+  border-bottom: 3px solid #c9d1db;
+}
+
+.nav {
+  float: left;
+  margin: 0 15px;
+  line-height: 40px;
+}
+
+.item{
+  float: left;
+}
+.item ul {
+  float: left;
+}
+.item ul li {
+  float: left;
+  line-height: 40px;
+  margin-left: 5px;
+}
 
