@@ -11,7 +11,7 @@ const ScheduleForm = () => {
     axios.post("/schedule/create")
   }
   return (
-    <Schedule state={state} submit={submitHandler}/>
+    <Schedule kindList={state.kindList} submit={submitHandler}/>
   )
 }
 
