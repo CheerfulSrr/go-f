@@ -4,11 +4,13 @@ import { HashRouter as Router, Link } from "react-router-dom";
 const Header = () => {
   return (
     <Router>
-      <div className="header">
-        <div className="nav"><Link to="/">GO</Link></div>
-        <div className="item">
-          <ul>
-            <li><Link to="/new/kind">新建类型</Link></li>
+      <div className="container">
+        <div className="navbar-header">
+          <Link className="navbar-brand" to="/">Go</Link>
+        </div>
+        <div className="collapse navbar-collapse">
+          <ul className="nav navbar-nav">
+            <li><Link to="/new/kind">新建信息</Link></li>
             <li><Link to="/new/schedule">新建计划</Link></li>
           </ul>
         </div>

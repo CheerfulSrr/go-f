@@ -1,24 +1,25 @@
 import React from "react";
-import Content from "@/components/Content";
 import Header from "@/components/Header";
-import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import Content from "@/components/Content";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import Kind from "@/components/Kind";
-import ScheduleForm from "@/container/ScheduleForm";
 
 const App = () => {
   return (
-    <div>
-      <Header/>
+    <div className="container">
+      <nav className="navbar navbar-default">
+        <div className="container-fluid">
+          <Header/>
+        </div>
+      </nav>
       <Content>
-        <Router>
-          <div>
-            <Switch>
-              <Route exact path="/" component={() => (<div>GO</div>)}/>
-              <Route path="/new/kind" component={(props) => <Kind {...props}/>}/>
-              <Route path="/new/schedule" component={(props) => <ScheduleForm {...props}/>}/>
-            </Switch>
-          </div>
-        </Router>
+        <HashRouter>
+          <Switch>
+            <Route exact path="/" children={() => <div>Go</div>}/>
+            <Route path="/new/kind" children={Kind}/>
+            <Route path="/new/schedule" children={() => <div>S</div>}/>
+          </Switch>
+        </HashRouter>
       </Content>
     </div>
   )
