@@ -12,6 +12,7 @@ const Header = () => {
           <ul className="nav navbar-nav">
             <li><Link to="/new/kind">新建信息</Link></li>
             <li><Link to="/new/schedule">新建计划</Link></li>
+            <li><Link to="/new/schedule/detail">计划详情</Link></li>
           </ul>
         </div>
       </div>
